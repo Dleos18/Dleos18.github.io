@@ -41,14 +41,14 @@ drawCircle()
 drawCircle()
 drawCircle()
 
-circles[0]
+
 
 
         // TODO 7 : Use a loop to create multiple circles
 
         for (var i = 0; i < 100; i++) {
-drawCircle();
-}
+            drawCircle();
+        }
 
 
 
@@ -78,7 +78,10 @@ drawCircle();
            game.checkCirclePosition(circles[4]);
 
             // TODO 8 / TODO 9 : Iterate over the array
-           
+           for (let i = 0; i < circles.length; i++) {
+                physikz.updatePosition(circles[i]);
+            
+           }
             
         }
     
@@ -98,10 +101,10 @@ drawCircle();
             if (circle.x < 0) {
                   circle.x = canvas.width;
             }
-            if (circle.x > canvas.width) {
-                    circle.x = 0;
+            // if (circle.x > canvas.width) {
+            //         circle.x = 0;
 
-            }
+            // }
             if (circle.y < 0) {
                     circle.y = canvas.height;
 
